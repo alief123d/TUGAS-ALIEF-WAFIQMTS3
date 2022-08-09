@@ -1,0 +1,142 @@
+html {
+    margin: 0;
+    padding:0;
+}
+ 
+.allcontainer {
+    height: 100vh;
+}
+
+ #container {
+    background-color: bisque;
+    height: 20vh;
+    width: 211vh;
+    border-radius: 6px;
+ }    
+ .ul-navbar {
+     background-color: chocolate;
+     width: 500px;
+     border-radius: 8px;
+
+
+ }
+ .li-navbar {
+
+list-style-type: none;
+
+ }
+ .li-navbar:hover {
+    background-color: azure;
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 8px;
+ }
+.a-navbar {
+    text-decoration: none;
+    font-weight: 800;
+    
+}
+.container-content{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    border-radius: 7px
+    
+}
+
+
+/* about */
+#container-about {
+    background-color: peru;
+    height: 70px;
+    width: 1366px;
+    border-radius: 7px;
+ }    
+ .ul-navbarabout {
+     background-color: crimson;
+     width: 500px;
+     border-radius: 8px;
+
+ }
+ .li-navbarabout:hover {
+    background-color: bisque;
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 8px;
+ }
+.a-navbarabout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 800;
+}
+.isiabout {
+    background-color: bisque;
+    height: 100vh;
+    border-radius: 7px;
+    width: 1366px;
+}
+
+.imgg {
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* isi contact */
+#container-contact {
+    background-color: peru;
+    height: 70px;
+    width: 1366px;
+    border-radius: 7px;
+ }    
+ .ul-navbarcontact {
+     background-color: crimson;
+     width: 500px;
+     border-radius: 8px;
+
+ }
+ .li-navbarcontact:hover {
+    background-color: bisque;
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 8px;
+ }
+.a-navbarcontact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 800;
+}
+.isicontact {
+    background-color: bisque;
+    height: 100vh;
+    border-radius: 7px;
+    width: 1366px;
+}
+
+@media(max-width:576px) {
+    #root {
+        width: 50vh;
+    }
+    #container {
+        width: 50vh;
+    }
+}
+
+
+
+        
+        
+
+        
+            
+            
+        
+        
+        

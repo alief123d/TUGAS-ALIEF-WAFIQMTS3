@@ -1,0 +1,11 @@
+@media (max-width : 576px) {
+    .ul-navbar {
+        width: 1px;
+        height: 50%;
+        background-color: white;
+    }
+    .container-content {
+        background-color: white;
+        
+    }
+}

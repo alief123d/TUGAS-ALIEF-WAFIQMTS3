@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="respon.css" />
+    <title>WEB AWR</title>
+</head>
+<style>
+    #root {
+        background-color: black;
+        color: black;
+        font-size: 10px;
+        text-align: center;
+        height: 40px;
+        justify-content: center;
+        border-radius: 8px;
+
+
+    }
+</style>
+
+<body>
+    
+    <div class="allcontainer">
+
+        <!-- konten kita -->
+        <div id="root">
+            <input type="text" placeholder="username" id="usernameinput" />
+            <input type="password" placeholder="password" id="passwordinput" />
+            <button onclick="onLogin()" id="loginbutton">LOGIN</button>
+            <button onclick="onLogout()" id="logoutbutton">LOGOUT</button>
+            <br>
+            <h1 id="admin">admin</h1>
+            <h1 id="standart">standart</h1>
+            <h1 id="expert">expert</h1>
+        </div>
+        <!-- navbar -->
+        <div id="container">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a href="#" class="a-navbar">HOME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="about.html" class="a-navbar">ABOUT</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="contact.html" class="a-navbar">CONTACT</a>
+                </li>
+            </ul>
+            <div class="container-content">
+                <h1 class="isi">HAI</h1>
+                <h3 class="isi">nama saya alief wafiq ramadhan.Saya adalah seorang siswa di mts3 Pekanbaru.</h3>
+            </div>
+        </div>
+        <!-- end -->
+        <br>
+        <br>
+
+    </div>
+    <script type="application/javascript">
+        let usernameinput = document.getElementById('usernameinput')
+        let passwordinput = document.getElementById('passwordinput')
+        let admin = document.getElementById('admin')
+        let standart = document.getElementById('standart')
+        let expert = document.getElementById('expert')
+        let loginbutton = document.getElementById('loginbutton')
+        let logoutbutton = document.getElementById('logoutbutton')
+        let container = document.getElementById('container')
+
+
+        admin.style.display = "none"
+        standart.style.display = "none"
+        expert.style.display = "none"
+        logoutbutton.style.display = "none"
+        container.style.display = "none"
+
+
+
+
+
+
+        function onLogin() {
+           
+            localStorage.setItem("username", usernameinput.value)
+            logoutbutton.style.display = "block"
+            container.style.display = "block"
+
+
+
+            if (usernameinput.value == "alief" && passwordinput.value == "alief123") {
+                // alert('login sebagai admin')
+                localStorage.setItem("role", "admin")
+                usernameinput.style.display = "none"
+                passwordinput.style.display = "none"
+                loginbutton.style.display = "none"
+                admin.style.display = "block"
+                standart.style.display = "none"
+                expert.style.display = "none"
+                container.style.display = "block"
+
+            } else if (usernameinput.value == "expert" && passwordinput.value == "expert123") {
+                localStorage.setItem("role", "expert")
+                usernameinput.style.display = "none"
+                passwordinput.style.display = "none"
+                loginbutton.style.display = "none"
+                admin.style.display = "none"
+                standart.style.display = "none"
+                expert.style.display = "block"
+                container.style.display = "block"
+
+            }
+
+            else {
+                // alert('login biasa')
+                usernameinput.style.display = "none"
+                passwordinput.style.display = "none"
+                loginbutton.style.display = "none"
+                localStorage.setItem("role", "standart")
+                standart.style.display = "block"
+                admin.style.display = "none"
+                expert.style.display = "none"
+                container.style.display = "block"
+
+            }
+        }
+        if (localStorage.getItem('username')) {
+            usernameinput.style.display = "none"
+            passwordinput.style.display = "none"
+            loginbutton.style.display = "none"
+            logoutbutton.style.display = "block"
+            container.style.display = "block"
+
+        }
+        if (localStorage.getItem('role') == "admin") {
+            admin.style.display = "block"
+            standart.style.display = "none"
+            expert.style.display = "none"
+        } else {
+            admin.style.display = "none"
+            standart.style.display = "none"
+            expert.style.display = "none"
+        }
+
+        function onLogout() {
+            localStorage.clear()
+            location.reload()
+        }
+    </script>
+    
+    
+
+</body>
+
+</html>
